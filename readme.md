@@ -87,4 +87,6 @@ Nouveau Répertoire InAndOut
             Quel est votre nom ? test
             Bonjourtest!
 
-    Maintenant on va crée un repertoire variableetAutre a la racine de c++
+Maintenant on va crée un repertoire variableetAutre a la racine de c++
+
+Maintenant Exercice 01 : Calculatrice

@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <limits> // Pour vérifier les erreurs d'entrée
+#include <sstream> // Pour convertir les chaînes en nombres ( String > Int or Float )
 using namespace std;
 
 int main( ) {
@@ -70,6 +71,7 @@ int main( ) {
             break;
         default:
             cout << "Erreur : opérateur invalide" << endl;
+            return 1; // Fin du programme avec et ou en cas d'erreur
             // break; Non nécessaire car c'est la fin du programme
     }
 
