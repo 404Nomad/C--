@@ -3,6 +3,8 @@
         "*.ndjson": "jsonl",
         "*.dbclient-js": "javascript",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "limits": "cpp"
     }
 }
