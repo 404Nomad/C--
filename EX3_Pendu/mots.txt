@@ -1,0 +1,9 @@
+arbre
+maison
+voiture
+chambre
+roue
+vitre
+souris
+chat
+chien
