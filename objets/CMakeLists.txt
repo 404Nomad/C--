@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(SOURCES 
     src/contact.cpp 
-    src/Personne.cpp)
+    src/Personne.cpp
+    src/Etudiant.cpp)
 
 include_directories(src)
 

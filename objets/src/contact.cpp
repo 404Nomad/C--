@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string> // Pour utiliser le type string
 #include <iomanip> // Pour utiliser setw()
+#include <vector>
 #include "Personne.h"
+#include "Etudiant.h"
 using namespace std;
+
 
 /* class Personne {
     // On commence par gérer l'encapsulation
@@ -77,6 +80,8 @@ using namespace std;
 
 int main()
 {
+    vector<Personne> carnet;
+
     //Création d'un objet de type Personne sans constructeur
     Personne p1;
     p1.setNom("Doe");
@@ -87,9 +92,31 @@ int main()
     // Création d'un autre objet de type Personne avec le constructeur
     Personne p2("Khan", "Great", "NewVegas@dev.org", 350);
 
+    // Création d'un objet de type Etudiant
+    Etudiant e1("Bac + 5", "Ecole 42");
+    e1.setNom("Bond");
+    e1.setPrenom("Mickeal");
+    e1.setEmail("noname@user.com");
+    e1.setAge(30);
+
+    Etudiant e2("Master 3", "Ecole 42", "Mouse", "Mickey", "tph@rdlcd.com", 52);
+
+    // Ajout des objets dans le carnet
+    carnet.push_back(p1);
+    carnet.push_back(p2);
+    carnet.push_back(e1);
+    carnet.push_back(e2);
+
+    // Parcours du carnet
+    for (const auto & pers : carnet) {
+        pers.afficheInfo3();
+        
+        
+    }
+
     // Sortie des informations
-    p1.afficheInfo3();
-    p2.afficheInfo3();
+    // p1.afficheInfo3();
+    // p2.afficheInfo3();
 
     return 0;
 }

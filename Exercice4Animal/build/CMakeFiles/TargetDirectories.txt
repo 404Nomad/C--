@@ -1,0 +1,3 @@
+/home/cd2groupea/Documents/C++/Exercice4Animal/build/CMakeFiles/animal.dir
+/home/cd2groupea/Documents/C++/Exercice4Animal/build/CMakeFiles/edit_cache.dir
+/home/cd2groupea/Documents/C++/Exercice4Animal/build/CMakeFiles/rebuild_cache.dir

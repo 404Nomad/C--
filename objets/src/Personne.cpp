@@ -12,7 +12,9 @@ Personne::Personne() : nom(""), prenom(""), email(""), age(0) {};
 Personne::Personne(string nom, string prenom, string email, int age) : nom(nom), prenom(prenom), email(email), age(age) {};
 
 // Destructeur
-Personne::~Personne() {};
+Personne::~Personne() {
+    //cout << "Destruction de l'objet Personne" << endl;
+};
 
 // Mutateurs (setters)
 void Personne::setNom( string nom ) { this->nom = nom; }

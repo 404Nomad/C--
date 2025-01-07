@@ -57,10 +57,10 @@ RM = /snap/cmake/1435/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/objets
+CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/Exercice4Animal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/objets/build
+CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/Exercice4Animal/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/objets/build/CMakeFiles /home/cd2groupea/Documents/C++/objets/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/Exercice4Animal/build/CMakeFiles /home/cd2groupea/Documents/C++/Exercice4Animal/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/objets/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/Exercice4Animal/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,89 +117,113 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named contact
+# Target rules for targets named animal
 
 # Build rule for target.
-contact: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contact
-.PHONY : contact
+animal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 animal
+.PHONY : animal
 
 # fast build rule for target.
-contact/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/build
-.PHONY : contact/fast
+animal/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/build
+.PHONY : animal/fast
 
-src/Etudiant.o: src/Etudiant.cpp.o
-.PHONY : src/Etudiant.o
-
-# target to build an object file
-src/Etudiant.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Etudiant.cpp.o
-.PHONY : src/Etudiant.cpp.o
-
-src/Etudiant.i: src/Etudiant.cpp.i
-.PHONY : src/Etudiant.i
-
-# target to preprocess a source file
-src/Etudiant.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Etudiant.cpp.i
-.PHONY : src/Etudiant.cpp.i
-
-src/Etudiant.s: src/Etudiant.cpp.s
-.PHONY : src/Etudiant.s
-
-# target to generate assembly for a file
-src/Etudiant.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Etudiant.cpp.s
-.PHONY : src/Etudiant.cpp.s
-
-src/Personne.o: src/Personne.cpp.o
-.PHONY : src/Personne.o
+src/animal.o: src/animal.cpp.o
+.PHONY : src/animal.o
 
 # target to build an object file
-src/Personne.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Personne.cpp.o
-.PHONY : src/Personne.cpp.o
+src/animal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/animal.cpp.o
+.PHONY : src/animal.cpp.o
 
-src/Personne.i: src/Personne.cpp.i
-.PHONY : src/Personne.i
+src/animal.i: src/animal.cpp.i
+.PHONY : src/animal.i
 
 # target to preprocess a source file
-src/Personne.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Personne.cpp.i
-.PHONY : src/Personne.cpp.i
+src/animal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/animal.cpp.i
+.PHONY : src/animal.cpp.i
 
-src/Personne.s: src/Personne.cpp.s
-.PHONY : src/Personne.s
+src/animal.s: src/animal.cpp.s
+.PHONY : src/animal.s
 
 # target to generate assembly for a file
-src/Personne.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/Personne.cpp.s
-.PHONY : src/Personne.cpp.s
+src/animal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/animal.cpp.s
+.PHONY : src/animal.cpp.s
 
-src/contact.o: src/contact.cpp.o
-.PHONY : src/contact.o
+src/chat.o: src/chat.cpp.o
+.PHONY : src/chat.o
 
 # target to build an object file
-src/contact.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/contact.cpp.o
-.PHONY : src/contact.cpp.o
+src/chat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chat.cpp.o
+.PHONY : src/chat.cpp.o
 
-src/contact.i: src/contact.cpp.i
-.PHONY : src/contact.i
+src/chat.i: src/chat.cpp.i
+.PHONY : src/chat.i
 
 # target to preprocess a source file
-src/contact.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/contact.cpp.i
-.PHONY : src/contact.cpp.i
+src/chat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chat.cpp.i
+.PHONY : src/chat.cpp.i
 
-src/contact.s: src/contact.cpp.s
-.PHONY : src/contact.s
+src/chat.s: src/chat.cpp.s
+.PHONY : src/chat.s
 
 # target to generate assembly for a file
-src/contact.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/contact.dir/build.make CMakeFiles/contact.dir/src/contact.cpp.s
-.PHONY : src/contact.cpp.s
+src/chat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chat.cpp.s
+.PHONY : src/chat.cpp.s
+
+src/chien.o: src/chien.cpp.o
+.PHONY : src/chien.o
+
+# target to build an object file
+src/chien.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chien.cpp.o
+.PHONY : src/chien.cpp.o
+
+src/chien.i: src/chien.cpp.i
+.PHONY : src/chien.i
+
+# target to preprocess a source file
+src/chien.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chien.cpp.i
+.PHONY : src/chien.cpp.i
+
+src/chien.s: src/chien.cpp.s
+.PHONY : src/chien.s
+
+# target to generate assembly for a file
+src/chien.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/chien.cpp.s
+.PHONY : src/chien.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/animal.dir/build.make CMakeFiles/animal.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -209,16 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... contact"
-	@echo "... src/Etudiant.o"
-	@echo "... src/Etudiant.i"
-	@echo "... src/Etudiant.s"
-	@echo "... src/Personne.o"
-	@echo "... src/Personne.i"
-	@echo "... src/Personne.s"
-	@echo "... src/contact.o"
-	@echo "... src/contact.i"
-	@echo "... src/contact.s"
+	@echo "... animal"
+	@echo "... src/animal.o"
+	@echo "... src/animal.i"
+	@echo "... src/animal.s"
+	@echo "... src/chat.o"
+	@echo "... src/chat.i"
+	@echo "... src/chat.s"
+	@echo "... src/chien.o"
+	@echo "... src/chien.i"
+	@echo "... src/chien.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
