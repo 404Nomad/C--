@@ -1,0 +1,3 @@
+/home/cd2groupea/Documents/C++/build/CMakeFiles/api.dir
+/home/cd2groupea/Documents/C++/build/CMakeFiles/edit_cache.dir
+/home/cd2groupea/Documents/C++/build/CMakeFiles/rebuild_cache.dir

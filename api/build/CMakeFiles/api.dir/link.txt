@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/api.dir/src/main.cpp.o -o api  /usr/lib/x86_64-linux-gnu/libcurl.so

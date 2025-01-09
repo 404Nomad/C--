@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/MyCppProject.dir/src/main.cpp.o -o MyCppProject
+/usr/bin/c++ CMakeFiles/MyCppProject.dir/src/main.cpp.o -o MyCppProject 
