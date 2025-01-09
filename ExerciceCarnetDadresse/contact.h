@@ -19,9 +19,11 @@ struct Carnet {
 };
 
 // Fonctions
+void creerTableDansMySQL();
 void afficherMenu();
 void ajouterContact(Carnet& carnet);
 void afficherContacts(const Carnet& carnet);
+void afficherContactsDepuisMySQL();
 void chercherContact(const Carnet& carnet);
 void supprimerContact(Carnet& carnet);
 

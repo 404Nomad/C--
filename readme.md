@@ -96,3 +96,6 @@ On installe sqlite3
 et la lib
 sudo apt install sqlite3
 sudo apt-get install libsqlite3-dev
+
+On installe mysql
+sudo apt-get install libmysqlcppconn-dev

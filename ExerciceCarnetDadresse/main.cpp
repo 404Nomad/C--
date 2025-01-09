@@ -24,6 +24,8 @@ using namespace std;
 int main() {
     Carnet carnet;
     int choix;
+    
+    creerTableDansMySQL();
 
     do {
         afficherMenu();
@@ -34,7 +36,7 @@ int main() {
                 ajouterContact(carnet);
                 break;
             case 2:
-                afficherContacts(carnet);
+                afficherContactsDepuisMySQL();
                 break;
             case 3:
                 chercherContact(carnet);

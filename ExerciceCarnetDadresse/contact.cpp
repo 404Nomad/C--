@@ -1,5 +1,11 @@
 #include "contact.h"
 #include <iostream>
+#include <mysql_driver.h>
+#include <mysql_connection.h>
+#include <cppconn/statement.h>
+#include <cppconn/prepared_statement.h>
+#include <cppconn/resultset.h>
+#include <cppconn/exception.h>
 using namespace std;
 
 // on initialise directement les champs à partir des entrées utilisateur
@@ -16,6 +22,52 @@ void afficherMenu() {
     cout << "" << endl;
     cout << "Choisissez une option : " ; // on ne endl pas afin de rester sur la meme ligne
 
+}
+
+// Fonction pour créer la table si elle n'existe pas
+void creerTableDansMySQL() {
+    try {
+        // Initialiser la connexion
+        sql::mysql::MySQL_Driver* driver = sql::mysql::get_mysql_driver_instance();
+        unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3310", "root", "myca"));
+        con->setSchema("mycpp");
+
+        // Créer la table
+        unique_ptr<sql::Statement> stmt(con->createStatement());
+        stmt->execute("CREATE TABLE IF NOT EXISTS contacts ("
+                      "id INT AUTO_INCREMENT PRIMARY KEY, "
+                      "nom VARCHAR(50) NOT NULL, "
+                      "prenom VARCHAR(50) NOT NULL, "
+                      "telephone VARCHAR(20) NOT NULL, "
+                      "email VARCHAR(50) NOT NULL);");
+
+        cout << "Table 'contacts' prête dans la base de données." << endl;
+    } catch (sql::SQLException& e) {
+        cerr << "Erreur lors de la création de la table : " << e.what() << endl;
+    }
+}
+
+// Fonction pour insérer un contact dans MySQL
+void sauvegarderContactDansMySQL(const Contact& contact) {
+    try {
+        // Initialiser la connexion
+        sql::mysql::MySQL_Driver* driver = sql::mysql::get_mysql_driver_instance();
+        unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3310", "root", "myca"));
+        con->setSchema("mycpp");
+
+        // Préparer et exécuter la requête
+        unique_ptr<sql::PreparedStatement> pstmt(
+            con->prepareStatement("INSERT INTO contacts (nom, prenom, telephone, email) VALUES (?, ?, ?, ?)"));
+        pstmt->setString(1, contact.nom);
+        pstmt->setString(2, contact.prenom);
+        pstmt->setString(3, contact.telephone);
+        pstmt->setString(4, contact.email);
+        pstmt->execute();
+
+        cout << "Contact sauvegardé dans la base de données !" << endl;
+    } catch (sql::SQLException& e) {
+        cerr << "Erreur lors de la sauvegarde dans MySQL : " << e.what() << endl;
+    }
 }
 
 // Ajouter un contact
@@ -47,6 +99,9 @@ void ajouterContact(Carnet& carnet) {
     carnet.contacts[carnet.nombreContacts] = nouveauContact;
     carnet.nombreContacts++;
     cout << "Contact ajouté avec succès !" << endl;
+
+    // Sauvegarder dans MySQL
+    sauvegarderContactDansMySQL(nouveauContact);
 }
 
 // Afficher tous les contacts
@@ -66,6 +121,32 @@ void afficherContacts(const Carnet& carnet) {
             << ", Prénom : " << carnet.contacts[i].prenom
             << ", Téléphone : " << carnet.contacts[i].telephone
             << ", Email : " << carnet.contacts[i].email << endl;
+    }
+}
+
+// Fonction pour afficher les contacts depuis MySQL
+void afficherContactsDepuisMySQL() {
+    try {
+        // Initialiser la connexion
+        sql::mysql::MySQL_Driver* driver = sql::mysql::get_mysql_driver_instance();
+        unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3310", "root", "myca"));
+        con->setSchema("mycpp");
+
+        // Exécuter la requête de récupération
+        unique_ptr<sql::Statement> stmt(con->createStatement());
+        unique_ptr<sql::ResultSet> res(stmt->executeQuery("SELECT * FROM contacts"));
+
+        // Afficher les résultats
+        cout << endl << "Liste des contacts :" << endl;
+        while (res->next()) {
+            cout << "ID : " << res->getInt("id") << " | "
+                 << "Nom : " << res->getString("nom") << " | "
+                 << "Prénom : " << res->getString("prenom") << " | "
+                 << "Téléphone : " << res->getString("telephone") << " | "
+                 << "Email : " << res->getString("email") << endl;
+        }
+    } catch (sql::SQLException& e) {
+        cerr << "Erreur lors de l'affichage des contacts depuis MySQL : " << e.what() << endl;
     }
 }
 
