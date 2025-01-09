@@ -90,3 +90,9 @@ Nouveau Répertoire InAndOut
 Maintenant on va crée un repertoire variableetAutre a la racine de c++
 
 Maintenant Exercice 01 : Calculatrice
+
+
+On installe sqlite3 
+et la lib
+sudo apt install sqlite3
+sudo apt-get install libsqlite3-dev
