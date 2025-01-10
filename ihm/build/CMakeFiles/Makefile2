@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/api
+CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/ihm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/build
+CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/ihm/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/api.dir/all
+all: CMakeFiles/wxApp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/api.dir/clean
+clean: CMakeFiles/wxApp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/api.dir
+# Target rules for target CMakeFiles/wxApp.dir
 
 # All Build rule for target.
-CMakeFiles/api.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cd2groupea/Documents/C++/build/CMakeFiles --progress-num=1,2 "Built target api"
-.PHONY : CMakeFiles/api.dir/all
+CMakeFiles/wxApp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cd2groupea/Documents/C++/ihm/build/CMakeFiles --progress-num=1,2 "Built target wxApp"
+.PHONY : CMakeFiles/wxApp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/api.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/api.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/build/CMakeFiles 0
-.PHONY : CMakeFiles/api.dir/rule
+CMakeFiles/wxApp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/ihm/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wxApp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/ihm/build/CMakeFiles 0
+.PHONY : CMakeFiles/wxApp.dir/rule
 
 # Convenience name for target.
-api: CMakeFiles/api.dir/rule
-.PHONY : api
+wxApp: CMakeFiles/wxApp.dir/rule
+.PHONY : wxApp
 
 # clean rule for target.
-CMakeFiles/api.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/clean
-.PHONY : CMakeFiles/api.dir/clean
+CMakeFiles/wxApp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/clean
+.PHONY : CMakeFiles/wxApp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

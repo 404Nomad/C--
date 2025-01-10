@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/cd2groupea/Documents/C++/api/src/main.cpp" "CMakeFiles/api.dir/src/main.cpp.o" "gcc" "CMakeFiles/api.dir/src/main.cpp.o.d"
+  "/home/cd2groupea/Documents/C++/ihm/main.cpp" "CMakeFiles/wxApp.dir/main.cpp.o" "gcc" "CMakeFiles/wxApp.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

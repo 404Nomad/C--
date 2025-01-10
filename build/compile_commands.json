@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/cd2groupea/Documents/C++/build",
-  "command": "/usr/bin/clang++  -I/home/cd2groupea/Documents/C++/api/src -g -std=gnu++20 -o CMakeFiles/api.dir/src/main.cpp.o -c /home/cd2groupea/Documents/C++/api/src/main.cpp",
-  "file": "/home/cd2groupea/Documents/C++/api/src/main.cpp"
-}
-]

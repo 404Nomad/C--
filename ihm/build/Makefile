@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/api
+CMAKE_SOURCE_DIR = /home/cd2groupea/Documents/C++/ihm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/build
+CMAKE_BINARY_DIR = /home/cd2groupea/Documents/C++/ihm/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/build/CMakeFiles /home/cd2groupea/Documents/C++/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/ihm/build/CMakeFiles /home/cd2groupea/Documents/C++/ihm/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cd2groupea/Documents/C++/ihm/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named api
+# Target rules for targets named wxApp
 
 # Build rule for target.
-api: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 api
-.PHONY : api
+wxApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wxApp
+.PHONY : wxApp
 
 # fast build rule for target.
-api/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/build
-.PHONY : api/fast
+wxApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/build
+.PHONY : wxApp/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api.dir/build.make CMakeFiles/api.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wxApp.dir/build.make CMakeFiles/wxApp.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... api"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... wxApp"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
